@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindeord — Flemming Pedersen</title>
+  <meta name="description" content="Skriv et mindeord til minde om Flemming Pedersen, skibsmægler fra Assens." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .tribute-form-wrap {
+      background: var(--warm-white);
+      border: 1px solid var(--smoke);
+      border-radius: var(--radius);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      box-shadow: var(--shadow-sm);
+    }
+    .form-group { margin-bottom: 1.4rem; }
+    .form-label {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 0.5rem;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--smoke);
+      border-radius: var(--radius);
+      font-family: 'Crimson Text', Georgia, serif;
+      font-size: 1.05rem;
+      color: var(--body-text);
+      background: var(--cream);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--brass);
+      box-shadow: 0 0 0 3px rgba(184,150,90,0.12);
+    }
+    .form-textarea { min-height: 140px; resize: vertical; }
+    .form-btn {
+      display: inline-block;
+      padding: 0.8rem 2.2rem;
+      background: var(--navy);
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid rgba(184,150,90,0.4);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .form-btn:hover {
+      background: var(--deep-blue);
+      border-color: var(--gold);
+      color: var(--warm-white);
+    }
+    .form-success {
+      display: none;
+      background: rgba(184,150,90,0.1);
+      border: 1px solid rgba(184,150,90,0.4);
+      border-radius: var(--radius);
+      padding: 1rem 1.5rem;
+      color: var(--navy);
+      font-style: italic;
+      margin-top: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+    }
+
+    /* Existing tributes */
+    .tribute-entries { margin-top: 3rem; }
+    .tribute-entry {
+      background: var(--warm-white);
+      border-left: 3px solid var(--brass);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition);
+    }
+    .tribute-entry:hover { box-shadow: var(--shadow-md); }
+    .entry-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .entry-name {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--navy);
+    }
+    .entry-date {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+    }
+    .entry-text {
+      font-style: italic;
+      color: var(--body-text);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .page-hero {
+      background: var(--navy);
+      padding: 7rem 1rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(184,150,90,0.2);
+    }
+    .page-hero h1 { color: var(--warm-white); }
+    .page-hero p { color: rgba(245,237,224,0.65); font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+
+  <div class="lang-toggle" role="group" aria-label="Language / Sprog">
+    <button class="lang-btn active" data-lang="da">DA</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">← Flemming Pedersen</a>
+      <button class="nav-hamburger" aria-label="Åbn menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html#om">
+          <span lang-content="da">Om Flemming</span>
+          <span lang-content="en">About</span>
+        </a></li>
+        <li><a href="../index.html#karriere">
+          <span lang-content="da">Karriere</span>
+          <span lang-content="en">Career</span>
+        </a></li>
+        <li><a href="../index.html#galleri">
+          <span lang-content="da">Galleri</span>
+          <span lang-content="en">Gallery</span>
+        </a></li>
+        <li><a href="../index.html#familie">
+          <span lang-content="da">Familie</span>
+          <span lang-content="en">Family</span>
+        </a></li>
+        <li><a href="../index.html#tak">
+          <span lang-content="da">Særlig tak</span>
+          <span lang-content="en">Special thanks</span>
+        </a></li>
+        <li><a href="mindeord.html" class="active">
+          <span lang-content="da">Mindeord</span>
+          <span lang-content="en">Tributes</span>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="hero-cross">✝</span>
+    <h1>
+      <span lang-content="da">Mindeord</span>
+      <span lang-content="en">Tributes</span>
+    </h1>
+    <p>
+      <span lang-content="da">Del et minde, en tanke eller blot et ord om Flemming</span>
+      <span lang-content="en">Share a memory, a thought, or simply a word about Flemming</span>
+    </p>
+  </div>
+
+  <!-- Form Section -->
+  <section class="section">
+    <div class="container" style="max-width: 760px;">
+
+      <div class="section-header reveal">
+        <span class="section-tag">
+      </div>
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePJOeu9__ScLGCS_GyajBLmDmp24Kp830YwtuCzB0erIeCJg/viewform?embedded=true" width="640" height="763" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+      <div class="tribute-entries">
+        <div class="section-header reveal">
+          <span class="section-tag">
+            <span lang-content="da">Fra dem der kendte ham</span>
+            <span lang-content="en">From those who knew him</span>
+          </span>
+          <h2>
+            <span lang-content="da">Modtagne mindeord</span>
+            <span lang-content="en">Received tributes</span>
+          </h2>
+          <div class="divider divider--left"></div>
+        </div>
+
+        <div id="tributeList">
+
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-cross">✝</span>
+      <p class="footer-name">Flemming Pedersen</p>
+      <p class="footer-dates">★ 25. juni 1965 &nbsp;—&nbsp; ✝ 28. januar 2026</p>
+      <p>
+        <a href="../index.html" class="footer-link">
+          <span lang-content="da">Tilbage til forsiden</span>
+          <span lang-content="en">Back to home</span>
+        </a>
+      </p>
+      <p class="footer-copyright">
+        &copy; <span id="footer-year">2026</span>
+        <span lang-content="da"> — Lavet med kærlighed af familien Pedersen</span>
+        <span lang-content="en"> — Made with love by the Pedersen family</span>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
