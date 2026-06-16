@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — Flemming Pedersen</title>
+  <meta name="description" content="Kontakt siden for mindehjemmesiden for Flemming Pedersen." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .page-hero {
+      background: var(--navy);
+      padding: 7rem 1rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(184,150,90,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../images/ship3.png') center 35% / cover no-repeat;
+      filter: brightness(0.15) saturate(0.4);
+    }
+    .page-hero > * { position: relative; z-index: 1; }
+    .page-hero h1 { color: var(--warm-white); }
+    .page-hero p {
+      color: rgba(245,237,224,0.6);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+    }
+
+    .contact-card {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--warm-white);
+      border: 1px solid var(--smoke);
+      border-top: 3px solid var(--brass);
+      border-radius: var(--radius);
+      padding: clamp(2rem, 6vw, 3.5rem);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+    }
+
+    .contact-icon {
+      font-size: 2.8rem;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+
+    .contact-card p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: var(--light-text);
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      font-style: normal;
+      color: var(--navy);
+      background: var(--parchment);
+      border: 1px solid rgba(184,150,90,0.4);
+      border-radius: 3rem;
+      padding: 0.8rem 1.8rem;
+      letter-spacing: 0.02em;
+      transition: all var(--transition);
+      word-break: break-all;
+    }
+    .contact-email:hover {
+      background: var(--navy);
+      color: var(--gold);
+      border-color: var(--brass);
+      box-shadow: var(--shadow-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle" role="group" aria-label="Language / Sprog">
+    <button class="lang-btn active" data-lang="da">DA</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">← Flemming Pedersen</a>
+      <button class="nav-hamburger" aria-label="Åbn menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html#om">
+          <span lang-content="da">Om Flemming</span>
+          <span lang-content="en">About</span>
+        </a></li>
+        <li><a href="karriere.html">
+          <span lang-content="da">Karriere</span>
+          <span lang-content="en">Career</span>
+        </a></li>
+        <li><a href="../index.html#galleri">
+          <span lang-content="da">Galleri</span>
+          <span lang-content="en">Gallery</span>
+        </a></li>
+        <li><a href="../index.html#familie">
+          <span lang-content="da">Familie</span>
+          <span lang-content="en">Family</span>
+        </a></li>
+        <li><a href="../index.html#tak">
+          <span lang-content="da">Særlig tak</span>
+          <span lang-content="en">Special thanks</span>
+        </a></li>
+        <li><a href="mindeord.html">
+          <span lang-content="da">Mindeord</span>
+          <span lang-content="en">Tributes</span>
+        </a></li>
+        <li><a href="kontakt.html" class="active">
+          <span lang-content="da">Kontakt</span>
+          <span lang-content="en">Contact</span>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="page-hero">
+    <span class="hero-cross">✉</span>
+    <h1>
+      <span lang-content="da">Kontakt</span>
+      <span lang-content="en">Contact</span>
+    </h1>
+    <p>
+      <span lang-content="da">Har du spørgsmål eller ønsker du at række ud?</span>
+      <span lang-content="en">Do you have questions or wish to get in touch?</span>
+    </p>
+  </div>
+
+  <!-- Contact section -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-card reveal">
+        <span class="contact-icon">✉️</span>
+
+        <p lang-content="da">
+          Hvis du har spørgsmål kan du kontakte mig på:
+        </p>
+        <p lang-content="en">
+          If you have any questions, you are welcome to contact me at:
+        </p>
+
+        <a class="contact-email" href="mailto:patrick@skibsmaeglerflemmingpedersen.dk">
+          patrick@skibsmaeglerflemmingpedersen.dk
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-cross">✝</span>
+      <p class="footer-name">Flemming Pedersen</p>
+      <p class="footer-dates">★ 25. juni 1965 &nbsp;—&nbsp; ✝ 28. januar 2026</p>
+      <p>
+        <a href="../index.html" class="footer-link">
+          <span lang-content="da">Tilbage til forsiden</span>
+          <span lang-content="en">Home</span>
+        </a>
+      </p>
+      <p class="footer-copyright">&copy; <span id="footer-year">2026</span>
+        <span lang-content="da"> — Lavet af Patrick Heinsaar, søn. V 0.9.3</span>
+        <span lang-content="en"> — Made by Patrick Heinsaar, son. V 0.9.3</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
